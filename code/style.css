@@ -1,0 +1,621 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
+  overflow-x: hidden;
+  
+}
+
+:root {
+  --background-color: transparent;
+  --background-color-white: white;
+  --first-text-color: white;
+  --second-text-color: #6a6a6a;
+  --accent-color-blue: #72858b;
+  --accent-color-pink: #d66f95;
+  --accent-color-red: #C5264C;
+}
+* {
+  font-family: "Gilroy";
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  overflow-x: hidden;
+  background-color: #e5e5f7;
+  
+  background-image:  linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(to right, #1a1a1a 1px, #000000 1px);
+  background-size: 20px 20px;
+
+}
+body::before{
+  content: "";
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.201));
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 720px;
+}
+header {
+  position: relative;
+}
+nav {
+  height: 70px;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding-right: 30px;
+}
+ul a {
+  text-decoration: none;
+  color: white;
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  
+}
+ul a::after{
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 2px;
+  transform: scale(0,1);
+left: 0;
+bottom: 0;
+transition:  transform 0.3s ease-in-out;
+}
+ul a:hover::after{
+  transform: scale(1,1);
+}
+/* aside{
+   height: 220px;
+   width: 40px;
+   position: absolute;
+   
+  
+   border-radius: 40px;
+   z-index: 99;
+   right: 20px;
+   top: 50px;
+  
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   font-size: 27px;
+   color: white;
+} */
+aside span {
+  transition: 0.4s;
+}
+aside span:hover {
+  scale: 1.2;
+}
+
+main {
+  height: 100dvh;
+  width: 100%;
+  
+  background-image: url("images/desktop/Desktop---red.webp");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* scroll-snap-align: start; */
+  background-color: var(--background-color);
+ 
+}
+
+main img {
+  height: 100%;
+  width: 100%;
+}
+.h1-name {
+  transition: 0.5s ease-in-out;
+}
+
+main h1 {
+  display: inline;
+  margin: 0;
+  margin-left: 4vw;
+  font-size: 5rem;
+
+  font-size: clamp(30px, 10vw, 5rem);
+  font-family: "Teko", sans-serif;
+  transition: 0.5s ease-in-out;
+
+  color: white;
+  text-transform: capitalize;
+}
+h1.transition span{
+  position: relative;
+ 
+}
+h1.transition span:before{
+  color: white;
+  position: absolute;
+  height: 100%;
+  
+  width: 650px;
+  content: 'Web Developer';
+  text-transform: none;
+  
+   animation: text-one ease-out 2s ;
+   left: 15px;
+   
+}
+
+
+
+
+main h1 a {
+  color: white;
+  text-decoration: none;
+}
+.stroke-text {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  font-family: "League Spartan", sans-serif;
+  color: white;
+}
+.stroke-text:hover{
+ 
+ scale: 1.5;
+ font-size: 5.2rem;
+}
+
+main div {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 4vw;
+  gap: 20px;
+}
+main button {
+  height: 50px;
+  width: 150px;
+  width: clamp(110px, 10vw, 150px);
+  height: clamp(45px, 4vw, 50px);
+  font-size: 16px;
+  background-color: transparent;
+  text-transform: capitalize;
+
+  color: white;
+  font-family: "Gilroy";
+  font-weight: 600;
+  mix-blend-mode: difference;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border: 2px white solid;
+  position: relative;
+  /* filter: drop-shadow( 0px 0px 0px transparent); */
+  z-index: 99;
+  overflow: hidden;
+}
+main button:hover ::before{
+  height: 100px;
+  width: 20px;
+  content: '';
+  
+  background-image: linear-gradient(90deg, #e0496d, #e0496d, #e0496cb4);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: skew(-30deg, 0deg);
+  animation: reflection 1.2s linear infinite;
+}
+main button span {
+  width: 0;
+  height: clamp(45px, 4vw, 50px);
+
+  background-color: #A31937;
+  background-color: var(--accent-color-red);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.4s;
+  z-index: -1;
+}
+main button:hover span {
+  width: clamp(110px, 10vw, 150px);
+  height: clamp(45px, 4vw, 50px);
+
+  background-color: #A31937;
+  background-color: var(--accent-color-red);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  
+  overflow: hidden;
+}
+main button:hover {
+  /* border-radius: 10px; */
+  transition: 0.3s ease-in-out;
+  scale: 1;
+ overflow: hidden;
+}
+
+
+
+
+
+
+
+
+button span.socials-button-text{
+  width: clamp(110px, 10vw, 150px);
+  height: clamp(45px, 4vw, 50px);
+  background-color: transparent;
+  
+}
+button .button-wrapper:hover span.socials-button-text{
+ 
+  opacity: 0;
+  left: 100px;
+}
+button .button-wrapper .material-symbols-outlined{
+ position: absolute;
+ left: -100px;
+ display: none;
+
+}
+button:hover .material-symbols-outlined{
+ 
+  left: 0px;
+top: 1px;
+gap: 15px;
+}
+button svg{
+ 
+  width: clamp(20px, 4vw, 20px);
+  fill: white;
+}
+button svg:hover{
+ 
+  scale: 1.2;
+
+}
+main button.socials:hover span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
+}
+
+
+main div:nth-child(2) {
+  height: 100px;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+/* section{
+    scroll-snap-align: start; 
+    transition: 10s; 
+} */
+section {
+  padding: 100px 0;
+}
+section.about-me {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  gap: 50px;
+}
+section .section-title {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 20px;
+  
+  
+}
+/* section .section-title i {
+  color: var(--accent-color-blue);
+  filter: drop-shadow(4px -15px 0px var(--accent-color-pink));
+} */
+section h1.section-title {
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+section h1.section-title i:nth-child(2){
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  font-size: clamp(40px, 12vw, 80px);
+  /* font-size: 80px; */
+  color: var(--accent-color-red);
+}
+section h1.section-title i:nth-child(1){
+  position: relative;
+ top: 20px;
+ font-size: clamp(30px, 6vw, 50px);
+  color: white;
+}
+svg{
+  fill: red;
+}
+section.about-me div.bio-picture {
+  margin-top: 50px;
+  margin-bottom: 70px;
+  width: 492px;
+  height: 492px;
+  flex-shrink: 0;
+  border: 10px solid var(--accent-color-blue);
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.about-me div h2 {
+  color: var(--accent-color-red);
+  font-family: Gilroy;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 0;
+  margin-top: 60px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+.about-me div span {
+  position: relative;
+  height: 40px;
+  width: 130%;
+  margin-bottom: 150px;
+  margin-top: 40px;
+}
+
+.about-me div h3 {
+  color: #fff;
+  font-family: Gilroy;
+  font-size: 22px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+
+  letter-spacing: 5px;
+}
+section.about-me div img {
+  width: 405px;
+  height: 405px;
+  flex-shrink: 0;
+  position: relative;
+  top: -40px;
+}
+.about-me p {
+  margin-top: 100px;
+  font-family: "Raleway", sans-serif;
+  max-width: 692px;
+  text-align: justify;
+  line-height: 30px;
+
+  padding: 0 30px;
+}
+section#about-me div.programming-languages-wrapper {
+  max-width: 692px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.programming-languages-wrapper div {
+  height: 100px;
+  width: 100px;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
+}
+section#about-me div:nth-of-type(2) div:hover i {
+  display: none;
+}
+section#about-me div:nth-of-type(2) div:nth-child(1):hover {
+  background-image: url(logos/w3_html5-icon.svg);
+  scale: 1.1;
+}
+section#about-me div:nth-of-type(2) div:nth-child(2):hover {
+  background-image: url(logos/css-icon.svg);
+  background-size: 56px;
+  scale: 1.1;
+}
+section#about-me div:nth-of-type(2) div:nth-child(3):hover {
+  background-image: url(logos/javascript\ logo.svg);
+  background-size: 61.4px;
+  scale: 1.1;
+}
+section#about-me div:nth-of-type(2) div:nth-child(4):hover {
+  background-image: url(logos/python-icon.svg);
+  background-size: 62px;
+  scale: 1.1;
+}
+
+hr {
+  width: 80%;
+  border: solid 1px var(--accent-color-blue);
+}
+
+section#projects {
+  background-color: var(--background-color);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  align-items: center;
+}
+section#projects div.projects-container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+section#projects div.projects-container div.wrapper {
+  width: clamp(350px, 50vw, 530px);
+  display: flex;
+  flex-direction: column;
+  max-width: 530px;
+  gap: 25px;
+  
+}
+section#projects div.projects-container div.wrapper a:first-child {
+  display: flex;
+  justify-content: center;
+}
+section#projects div.projects-container div.wrapper a,
+p,
+h3,
+h4 {
+  text-decoration: none;
+  color: var(--first-text-color);
+  text-align: justify;
+  margin: 0;
+  line-height: 30px;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+}
+section#projects div.projects-container div.wrapper a {
+  display: flex;
+}
+section#projects div.projects-container div.wrapper a i {
+  rotate: 90deg;
+  margin-left: 10px;
+  color: var(--accent-color-red);
+  transition: 0.4s;
+}
+section#projects div.projects-container div.wrapper a:hover i {
+  margin-left: 20px;
+  transition: 0.4s;
+}
+section#projects div.projects-container div.wrapper a:hover {
+  
+  text-decoration: underline 2px;
+  color: var(--accent-color-red);
+}
+section#projects div.projects-container div.wrapper a img:hover {
+  scale: 1.03;
+}
+section#projects div.projects-container .wrapper div {
+  width: clamp(350px, 50vw, 530px);
+  height: clamp(350px, 50vw, 530px);
+  background-color: #f9f9f9;
+
+  background-color: #e5e5f7;
+ 
+  opacity: 1;
+  /* background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #e5e5f7 15px
+    ),
+    repeating-linear-gradient(rgb(243, 214, 219), white); */
+
+  background-position: center;
+  background-size: cover;
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+section#projects div img {
+  margin-top: 28px;
+  transition: 0.4s;
+
+  width: 90%;
+  object-fit: cover;
+  filter: drop-shadow(0px 10px 5px rgb(131, 129, 129));
+}
+
+section#skills {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
+div.photography {
+  place-content: center;
+  max-width: 1111px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  margin: 0 100px;
+  gap: 10px;
+  align-items: center;
+}
+.photography div {
+  width: 100%;
+  overflow: hidden;
+}
+.photography div:nth-child(1) {
+  grid-row: 1/3;
+}
+.photography div:nth-child(3) {
+  grid-row: 1/3;
+  grid-column: 3;
+}
+.photography div:nth-child(4) {
+  grid-column: 4;
+  grid-row: 2/3;
+}
+
+.photography div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

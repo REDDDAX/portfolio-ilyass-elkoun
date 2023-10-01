@@ -1,0 +1,145 @@
+@media screen and (max-width: 1042px) {
+    .photography div:nth-child(4) {
+      grid-column: 2;
+      grid-row: 2/3;
+    }
+  }
+  @media screen and (max-width: 785px) {
+    .photography div:nth-child(2) {
+      grid-column: 1/1;
+    }
+    .photography div:nth-child(4) {
+      grid-row: 3/4;
+      grid-column: 3;
+    }
+    div.photography {
+      place-content: center;
+  
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  
+      margin: 0 100px;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+  
+  @media screen and (max-width: 771px) {
+    nav {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+    }
+    ul {
+      gap: 4vw;
+    }
+    main {
+      background-image: url("images/phone/Desktop---red-phone.webp");
+  
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  @media screen and (max-width: 611px) {
+    /* section.about-me h1 {
+      text-transform: uppercase;
+      font-size: 25px;
+      line-height: 20px;
+      color: #d66f95;
+    }
+    section.about-me h1 i:last-child {
+      position: relative;
+      right: 10px;
+      color: #72858b;
+    } */
+    section.about-me div.bio-picture {
+      width: 292px;
+      height: 292px;
+      flex-shrink: 0;
+      border: 6px solid #72858b;
+      display: flex;
+      flex-direction: column;
+  
+      align-items: center;
+    }
+    .about-me div h2 {
+      color: #d66f95;
+      font-family: Gilroy;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      margin-bottom: 0;
+      margin-top: 30px;
+      font-family: "Raleway", sans-serif;
+      text-transform: uppercase;
+    }
+    .about-me div span {
+      position: relative;
+      height: 40px;
+      width: 100vw;
+      margin-bottom: 150px;
+    }
+    .about-me div h3 {
+      color: #fff;
+      font-family: Gilroy;
+      font-size: 16px;
+      text-align: center;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+  
+      font-family: "Raleway", sans-serif;
+      position: absolute;
+      margin-bottom: 0;
+      letter-spacing: 5px;
+    }
+    section.about-me div img {
+      width: 240px;
+      height: 240px;
+      position: relative;
+      top: -40px;
+    }
+    .about-me p {
+      margin-top: 70px;
+      font-family: "Raleway", sans-serif;
+      max-width: 90vw;
+      text-align: justify;
+      line-height: 30px;
+    }
+    section#about-me div.programming-languages-wrapper {
+      gap: 0px;
+    }
+    .programming-languages-wrapper div {
+      height: 80px;
+      width: 80px;
+      font-size: 70px;
+    }
+  }
+  @media screen and (max-width: 530px) {
+    div.photography {
+      place-content: center;
+      max-width: 1111px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 0px;
+  
+      gap: 10px;
+      align-items: center;
+    }
+    div.photography div {
+      height: 250px;
+    }
+    div.photography img {
+      width: 250px;
+    }
+  }
+  
+  
+  section{
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+    background-color: #000000;
+  
+  }
